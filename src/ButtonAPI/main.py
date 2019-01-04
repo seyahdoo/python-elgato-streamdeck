@@ -2,6 +2,8 @@
 import StreamDeck.StreamDeck as StreamDeck
 import threading
 from PIL import Image, ImageDraw, ImageFont
+import time
+from threading import Event
 
 current_folder = None
 
@@ -25,7 +27,6 @@ if __name__ == "__main__":
 
     deck.set_key_callback(key_change_callback)
 
-    while True:
-        pass
-
+    # wait forever
+    Event().wait()
         
