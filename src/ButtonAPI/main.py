@@ -31,15 +31,16 @@ if __name__ == "__main__":
     # StreamDeck.decks
     
     # Functions
-    # StreamDeck.Deck.set_image(image)
+    # StreamDeck.Deck.set_image(space_index,image)
+    # StreamDeck.Deck.clear_image(space_index)
+    # StreamDeck.Deck.set_brightness(brightness)
 
     # Events
     # StreamDeck.on_deck_plugged_in(deck)
     # StreamDeck.on_deck_removed(deck)
     # StreamDeck.Deck.on_button_pressed()
     # StreamDeck.Deck.on_button_released()
-    
-    
+    # StreamDeck.on_error(error_info)
 
 
     manager = StreamDeck.DeviceManager()
