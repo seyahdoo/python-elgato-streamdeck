@@ -19,9 +19,27 @@ def key_change_callback(deck, key, state):
 if __name__ == "__main__":
 
 
-    # TODO Should be able to detect PLUGGING and UN-PLUGGING
+    # TODO Should be able to detect PLUGGING-IN and REMOVING
     # TODO Should have full macro support, any key can be programmed
     # TODO Should have nested folders
+    
+    
+    # TODO Remodel the crappy streamdeck API
+    # First plugged in deck always be deck[0]
+
+    # Varibles
+    # StreamDeck.decks
+    
+    # Functions
+    # StreamDeck.Deck.set_image(image)
+
+    # Events
+    # StreamDeck.on_deck_plugged_in(deck)
+    # StreamDeck.on_deck_removed(deck)
+    # StreamDeck.Deck.on_button_pressed()
+    # StreamDeck.Deck.on_button_released()
+    
+    
 
 
     manager = StreamDeck.DeviceManager()
