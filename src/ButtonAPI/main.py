@@ -17,6 +17,13 @@ def key_change_callback(deck, key, state):
 
 
 if __name__ == "__main__":
+
+
+    # TODO Should be able to detect PLUGGING and UN-PLUGGING
+    # TODO Should have full macro support, any key can be programmed
+    # TODO Should have nested folders
+
+
     manager = StreamDeck.DeviceManager()
     deck = manager.enumerate()[0]
 
