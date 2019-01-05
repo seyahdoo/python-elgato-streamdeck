@@ -1,23 +1,18 @@
 
-import StreamDeck.StreamDeck as StreamDeck
-import threading
-from PIL import Image, ImageDraw, ImageFont
-import time
+import src.streamdeck.streamdeck as streamdeck
 from threading import Event
 
 current_folder = None
 
 
 def key_change_callback(deck, key, state):
-    if(state == "Pressed"):
+    if state == "Pressed":
         current_folder.on_pressed(key)
-    elif(state == "Released"):
+    elif state == "Released":
         current_folder.on_released(key)
 
 
-
 if __name__ == "__main__":
-
 
     # TODO Should be able to detect PLUGGING-IN and REMOVING
     # TODO Should have full macro support, any key can be programmed
@@ -29,7 +24,8 @@ if __name__ == "__main__":
 
     # Varibles
     # StreamDeck.decks
-    
+    # deck.mini?
+
     # Functions
     # StreamDeck.Deck.set_image(space_index,image)
     # StreamDeck.Deck.clear_image(space_index)
@@ -42,8 +38,13 @@ if __name__ == "__main__":
     # StreamDeck.Deck.on_button_released()
     # StreamDeck.on_error(error_info)
 
+    # ----------------------------
 
-    manager = StreamDeck.DeviceManager()
+    # NOT IN API
+    # Folders and Actions
+    # As a boilerplate
+
+    manager = streamdeck.DeviceManager()
     deck = manager.enumerate()[0]
 
     deck.open()
@@ -55,4 +56,3 @@ if __name__ == "__main__":
 
     # wait forever
     Event().wait()
-        

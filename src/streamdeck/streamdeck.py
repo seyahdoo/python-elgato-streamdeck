@@ -30,7 +30,7 @@ class DeviceManager(object):
         :return: Instance of a HID Transport class
         """
         if transport == "hidapi":
-            from .Transport.HIDAPI import HIDAPI
+            from .hidapi import HIDAPI
             return HIDAPI()
         else:
             raise IOError("Invalid HID transport backend \"{}\".".format(transport))
